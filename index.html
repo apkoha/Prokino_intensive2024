@@ -6,10 +6,25 @@
 
     <link rel="icon" href="img/icon.svg" type="image/svg+xml" />
 
-    <title>ПРО КИНО - Аватар: Легенда об Аанге</title>
+    <link
+      rel="preload"
+      href="fonts/inter-v13-cyrillic_latin-600.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/inter-v13-cyrillic_latin-regular.woff2"
+      as="font"
+      crossorigin
+    />
 
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/script.js" defer></script>
+
+    <title>ПРО КИНО - Аватар: Легенда об Аанге</title>
   </head>
   <body>
     <header class="header">
@@ -69,7 +84,7 @@
       <section class="about" id="about">
         <div class="container about__container">
           <div class="about__content">
-            <h2 class="about__title">Аватар: Легенда об&nbsp;Аанге</h2>
+            <h2 class="about__title">Аватар: Легенда&nbsp;об&nbsp;Аанге</h2>
             <p class="about__description">
               Сюжет рассказывает о&nbsp;мальчике из&nbsp;племени воздушных
               кочевников, Аанге, способном покорять стихию воздуха.
@@ -87,44 +102,41 @@
             </p>
           </div>
 
-          <picture class="about__pic">
-            <img class="about__image" src="img/aang.jpg" alt="Аанг на Аппе" />
-          </picture>
+          <div class="about__pic">
+            <!-- <img class="about__image" src="img/aang.jpg" alt="Аанг на Аппе" /> -->
+          </div>
         </div>
       </section>
 
       <section class="trailers" id="trailers">
-        <div class="container">
+        <div class="container trailers__container">
           <ul class="trailers__buttons">
             <li class="trailers__item">
-              <button class="button trailers__button trailers__button_active">
+              <button
+                class="button trailers__button trailers__button_active"
+                aria-label="первый трейлер"
+                data-src="https://www.youtube.com/embed/ByAn8DF8Ykk"
+              >
                 трейлер 1
               </button>
             </li>
             <li class="trailers__item">
-              <button class="button trailers__button">трейлер 2</button>
+              <button
+                class="button trailers__button"
+                aria-label="второй трейлер"
+                data-src="https://www.youtube.com/embed/waJKJW_XU90"
+              >
+                трейлер 2
+              </button>
             </li>
             <li class="trailers__item">
-              <button class="button trailers__button">трейлер 3</button>
-            </li>
-          </ul>
-
-          <ul class="trailers__list">
-            <li class="trailers__item">
-              <div class="trailers__wrapper">
-                <iframe
-                  class="trailers__video"
-                  src="https://www.youtube.com/embed/ByAn8DF8Ykk"
-                  title="YouTube video player"
-                  frameborder="0"
-                ></iframe>
-              </div>
-            </li>
-            <li class="trailer__item">
-              <div class="trailer__wrapper"></div>
-            </li>
-            <li class="trailer__item">
-              <div class="trailer__wrapper"></div>
+              <button
+                class="button trailers__button"
+                aria-label="третий трейлер"
+                data-src="https://www.youtube.com/embed/Cw12Dat8bkE"
+              >
+                трейлер 3
+              </button>
             </li>
           </ul>
         </div>
